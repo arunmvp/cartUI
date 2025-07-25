@@ -1,0 +1,145 @@
+.cart-dropdown {
+  position: fixed;
+  right: -400px;
+  top: 0;
+  width: 350px;
+  height: 100%;
+  background-color: var(--card-bg);
+  padding: 1rem;
+  /* border-radius: 10px; */
+  box-shadow: 0 0 15px #000;
+  transition: all 1s ease-in-out;
+  z-index: 999;
+  animation: slideIn 0.5s ease-in-out;
+}
+.cart-dropdown.active{
+  right: 0;
+  transition: all 3s ease-in-out;
+}
+@keyframes slideIn {
+  from {
+    right: -400px;
+  }
+  to {
+    right: 0;
+  }
+  
+}
+.carttt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid #333;
+}
+
+.carttt h4 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.remove-btnn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.remove-btnn:hover {
+  /* transform: rotate(90deg); */
+  color: #f87171;
+}
+
+.productsBox {
+  overflow-y: scroll;
+  height: 73%;
+  padding: 1rem 1rem;
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar styling */
+.productsBox::-webkit-scrollbar {
+  width: 8px;
+}
+.productsBox::-webkit-scrollbar-track {
+  background: #111;
+  border-radius: 10px;
+}
+.productsBox::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+.productsBox::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  background: #2b2b2b;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.cart-item:hover {
+  background: #3a3a3a;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-right: 0.75rem;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-info p {
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.item-info span {
+  font-size: 13px;
+  color: #bbb;
+}
+
+.remove-btn {
+  background: transparent;
+  border: none;
+  color: #f87171;
+  font-size: 18px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+}
+
+.remove-btn:hover {
+  color: #ff4d4d;
+}
+
+.checkout-btn {
+  width: 90%;
+  margin: 1rem auto;
+  display: block;
+  padding: 0.7rem 1rem;
+  background: #4ade80;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.checkout-btn:hover {
+  background: #22c55e;
+}
