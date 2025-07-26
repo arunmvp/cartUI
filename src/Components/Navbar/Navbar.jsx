@@ -1,6 +1,5 @@
 import React from 'react';
 import './Navbar.css';
-import { FiMoon } from 'react-icons/fi';
 import { BsCart3 } from 'react-icons/bs';
 import { useSelector } from 'react-redux';
 
