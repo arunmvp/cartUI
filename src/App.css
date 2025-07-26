@@ -38,3 +38,8 @@ button:hover {
   background: rgba(0, 0, 0, 0.4);
   z-index: 90;
 }
+.custom-toast {
+  background-color: #ad2e2eff;
+  color: #fff;
+  border-radius: 8px;
+}

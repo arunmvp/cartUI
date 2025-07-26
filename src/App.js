@@ -3,6 +3,8 @@ import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import ProductList from "./Components/Productlist/ProductList";
 import CartDropdown from "./Components/Cartdropdown/CartDropdown";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   const [open, setOpen] = useState(false);
   const toggleMenu = () => setOpen(!open);
@@ -29,10 +31,16 @@ function App() {
       <ProductList productss={cartItems} />
       {open && (
         <>
-          <div className="overlay" onClick={toggleMenu}></div> 
-          <CartDropdown toggleMenu={toggleMenu} /> 
+          <div className="overlay" onClick={toggleMenu}></div>
+          <CartDropdown toggleMenu={toggleMenu} />
         </>
       )}
+      <ToastContainer
+        toastClassName="custom-toast"
+        bodyClassName="custom-body"
+        position="top-right"
+        autoClose={1000}
+      />
     </>
   );
 }

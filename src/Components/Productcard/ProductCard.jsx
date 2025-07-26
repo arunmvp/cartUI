@@ -2,24 +2,25 @@ import React, { useState } from "react";
 import "./ProductCard.css";
 import { useDispatch } from "react-redux";
 import { addItem } from "../../redux/CreateSlice";
+import { toast } from "react-toastify";
 
-const ProductCard = ({
-  id,
-  title,
-  price,
+const ProductCard = ({ 
+  id, 
+  title, 
+  price, 
   images,
-  thumbnail,
-  description,
+  thumbnail,  
+  description, 
   rating,
 }) => {
-  const [imageset, setImageset] = useState(false);
-  const [load, setLoad] = useState(false);
+  const [imageset, setImageset] = useState(false); 
+  const [load, setLoad] = useState(false); 
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); 
 
-  const setLoading = () => {
+  const setLoading = () => { 
     setLoad(true);
-    setTimeout(() => {
+    setTimeout(() => { 
       setLoad(false);
     }, 1500);
   };
@@ -44,6 +45,14 @@ const ProductCard = ({
         onClick={() => {
           dispatch(addItem({ id, title, price, images }));
           setLoading();
+          toast.success(`${title} added to cart!`, {
+            style: {
+              backgroundColor: "#3c3d3cff",
+              top: "70px",
+              color: "#fff",
+              borderRadius: "8px",
+            },
+          });
         }}
       >
         {!load ? "Add to cart" : <span className="spinner"></span>}

@@ -12,8 +12,7 @@ const Navbar = ({toggleMenu}) => {
     <nav className="navbar">
       <div className="logo">🛍️ MyCart</div>
       <div className="nav-actions">
-        <button className="theme-toggle"><FiMoon size={20} /></button>
-        <div className="cart-icon" onClick={toggleMenu}>
+        <div className="cart-icon" onClick={toggleMenu}> 
           <BsCart3 size={22} />
           <span className="cart-badge">{CartItems.length}</span> 
         </div>

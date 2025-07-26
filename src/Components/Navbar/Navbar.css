@@ -1,15 +1,18 @@
 .navbar {
   background-color: var(--card-bg);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 1rem 2rem;
   align-items: center;
   box-shadow: 0 2px 10px #000;
+  position: fixed;
+  width: 100%;
+  z-index: 998;
 }
 
 .nav-actions {
   display: flex;
-  align-items: center;
+  align-items: center; 
   gap: 1rem;
 }
 
